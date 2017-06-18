@@ -1,26 +1,39 @@
 package core;
 
-import java.util.*;
+import java.util.HashMap;
 
 /**
  * Created by Yutaka on 6/6/17.
  */
 public class MapHashMap {
 
-    // adding === put === element to map HashMap
-    // index: int
-    // value: String
-    public void hashMapPutElement(HashMap hm, int ind, String val) {
+    /**
+     * adding === put === element to map HashMap
+     * index: int
+     * value: String
+     * @param hm
+     * @param ind
+     * @param val
+     */
+    public void hashMapPutElementIndexIntValueString(HashMap hm, int ind, String val) {
         hm.put(ind, val);
     }
 
-    // print HashMap
-    public void printHashMap(HashMap hm) {
-        System.out.println(hm + " : " + hm);
+    /**
+     * @param hm
+     * @return size
+     */
+    public int hashMapSize(HashMap hm) {
+        return hm.size();
     }
 
-    public void hashMapPutElementsIndexString(HashMap hm) {
-        hm.put("eleven", "element11");
+    /**
+     * print HashMap
+     * @param hm
+     *
+     */
+    public void printHashMap(HashMap hm) {
+        System.out.println(hm + " : " + hm);
     }
 
 }
