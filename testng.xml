@@ -3,7 +3,7 @@
 <suite name="CollectionMapTestSuite">
     <test name="CollectionMapTest">
         <classes>
-            <class name="core.CollectionMapTest"/>
+            <class name="core.CollectionMapTest"/>            
         </classes>
     </test>
 </suite>

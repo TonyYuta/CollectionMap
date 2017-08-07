@@ -35,7 +35,7 @@ public class AllDataStructures {
 	} // end main	
 	
 	/*========================= HashMap ============================== */
-	public void hashMap01Map() {
+	public HashMap hashMap01Map() {
 		// create an object of class HashMap
 		HashMap hashMap01 = new HashMap();
 	
@@ -83,7 +83,7 @@ public class AllDataStructures {
 			System.out.println(i + " : " + hashMap01.get(i));
 		}
 
-		
+		return hashMap01;
 		
 		} // end hashMap01Map()
 	

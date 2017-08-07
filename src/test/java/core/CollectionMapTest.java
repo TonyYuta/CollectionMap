@@ -1,10 +1,11 @@
 package core;
 
+//import org.testng.*;
+import java.util.HashMap;
+
 import org.testng.Assert;
 //import org.testng.annotations.Test;
-import org.testng.annotations.*;
-import java.util.*;
-//import org.testng.*;
+import org.testng.annotations.Test;
 
 
 /**
@@ -16,6 +17,7 @@ public class CollectionMapTest {
      * create instance of the class MapHashMap
      */
     MapHashMap mapHashMap = new MapHashMap();
+    AllDataStructures allDataStructures = new AllDataStructures();
 
     /**
      * create instance of HashMap
@@ -52,12 +54,11 @@ public class CollectionMapTest {
         System.out.println("============= word ============ ");
     }
 
-    /**
-     * qqq temporary
-     */
-    @Test
-    public void qqqEmptyTest() {
-        int i = 10;
+    @Test(enabled = true, groups = {"HashMap", "Map", "All" }, priority = 0)
+    public void testHashMap01Map() {
+    	int expected = 8;
+    	Assert.assertEquals(allDataStructures.hashMap01Map().size(), expected, "Size HashMap doesn't match to expected");
     }
-
+    
+    
 }
