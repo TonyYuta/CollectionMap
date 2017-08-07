@@ -40,7 +40,7 @@ public class CollectionMapTest {
         Assert.assertEquals(1,1);
     }
 
-    @Test(enabled = false, groups = {"HashMap", "Map", "All"})
+    @Test(enabled = true, groups = {"HashMap", "Map", "All"})
     public void printHashMap() {
 
         mapHashMap.printHashMap(hashMap);

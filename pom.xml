@@ -25,7 +25,7 @@
         <artifactId>testng</artifactId>
         <version>6.11</version>
     </dependency>
-<!--
+
 
     <dependency>
         <groupId>com.javaslang</groupId>
@@ -33,7 +33,7 @@
         <version>2.0.0-RC2</version>
         <scope>test</scope>
     </dependency>
--->
+
 
 </dependencies>
 
@@ -45,12 +45,16 @@
             <version>2.20</version>
             <configuration>
                 <suiteXmlFiles>
+<!--
                     <suiteXmlFile>src/test/resources/testng.xml</suiteXmlFile>
+-->
+                    <suiteXmlFile>testng.xml</suiteXmlFile>
+
                 </suiteXmlFiles>
                 <properties>
                     <property>
                         <name>testnames</name>
-                        <value>CollectionMap</value>
+                        <value>CollectionMapTest</value>
                     </property>
                 </properties>
             </configuration>
