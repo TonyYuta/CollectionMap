@@ -60,5 +60,11 @@ public class CollectionMapTest {
     	Assert.assertEquals(allDataStructures.hashMap01Map().size(), expected, "Size HashMap doesn't match to expected");
     }
     
+    @Test(enabled = true, groups = {"HashMap", "Map", "All" }, priority = 0)
+    public void testHashMap02Map() {
+    	int expected = 8;
+    	Assert.assertEquals(allDataStructures.hashMap02Map().size(), expected, "Size HashMap doesn't match to expected");
+    }
+    
     
 }
