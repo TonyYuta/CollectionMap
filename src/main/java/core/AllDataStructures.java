@@ -8,6 +8,7 @@
 
 package core;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Set;
 
@@ -31,8 +32,12 @@ public class AllDataStructures {
 		AllDataStructures allDataStructures = new AllDataStructures();
 		
 		// work with HashMap
-		allDataStructures.hashMap01Map();
-		allDataStructures.hashMap02Map();
+		//allDataStructures.hashMap01Map();
+		//allDataStructures.hashMap02Map();
+		
+		// work with ArrayList
+		allDataStructures.arrayList01List();
+		
 
 		
 	} // end main	
@@ -141,8 +146,68 @@ public class AllDataStructures {
 	/*=============================================================================================*/
 	/*=============================================================================================*/
 	
+	/*=============================== ArrayList ===================================================*/
+		public ArrayList arrayList01List() {
+			
+			// create an object
+			ArrayList arrayList01 = new ArrayList();
+			
+			// print out init size
+			System.out.println("arrayList01.size() : " + arrayList01.size());
+			
+			// populate ArrayList
+			for(int i = 0; i < 10; i++) {
+				arrayList01.add("fruit" + i);
+			}
+			
+			// print out current size
+			System.out.println("arrayList01.size() : " + arrayList01.size());
+			
+			//  clear(): It is used for removing all the elements of the array list in one go. 
 
+			
+			// populate ArrayList
+			arrayList01.add("apple");
+			arrayList01.add("banana");
+			arrayList01.add("pear");
+			arrayList01.add("strawberry");
+			arrayList01.add("blueberry");
+			arrayList01.add("plum");
+			arrayList01.add("peach");
+			arrayList01.add("grape");
+			
+			// add(int index, Object o) - add between existing elements
+			arrayList01.add(5, "raspberry");
+			
+			// print out current size
+			System.out.println("arrayList01.size() : " + arrayList01.size());
+			
+			// print out ArrayList
+			System.out.println("arrayList01 : " + arrayList01 + "\n");
+			
+			// print out ArrayList
+			printArrayList(arrayList01);
+			
+			// Object get(int index)
+			System.out.println("arrayList01.get(2) : " + arrayList01.get(2));
+			
+			// 9) boolean contains(Object o): It checks whether the given object o is present in the array list if its there then it returns true else it returns false.
+			System.out.println("arrayList01.contains(\"raspberry\") " + arrayList01.contains("raspberry"));
+			
+			// print out current size
+			System.out.println("arrayList01.size() : " + arrayList01.size());
+			
 
+			
+			return arrayList01;
+		}
 
+		// print out ArrayList in format index & value
+		public void printArrayList(ArrayList al) {
+	
+			for (int i = 0; i < al.size(); i++) {
+				System.out.println(i + " : " + al.get(i));
+				}
+		}
 
 } // class AllDataStructures 
