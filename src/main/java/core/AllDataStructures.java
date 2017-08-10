@@ -34,14 +34,14 @@ public class AllDataStructures {
 		AllDataStructures allDataStructures = new AllDataStructures();
 		
 		// work with HashMap
-		//allDataStructures.hashMap01Map();
-		//allDataStructures.hashMap02Map();
+		allDataStructures.hashMap01Map();
+		allDataStructures.hashMap02Map();
 		
 		// work with ArrayList
-		//allDataStructures.arrayList01List();
+		allDataStructures.arrayList01List();
 		
 		// work with Vector
-		// allDataStructures.vector01List();
+		allDataStructures.vector01List();
 		
 		// work with LinkedList
 		allDataStructures.linkedList01List();
