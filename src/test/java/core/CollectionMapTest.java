@@ -74,19 +74,19 @@ public class CollectionMapTest {
     
     @Test(enabled = true, groups = {"ArrayList", "List", "All"}, priority = 1)
     public void testArrayList01List() {
-    	int expected = 8;
+    	int expected = 9;
     	Assert.assertEquals(allDataStructures.arrayList01List().size(), expected, "Size HashMap doesn't match to expected");
     }
     
     @Test(enabled = true, groups = {"Vector", "List", "All"}, priority = 1)
     public void testVector01List() {
-    	int expected = 8;
+    	int expected = 4;
     	Assert.assertEquals(allDataStructures.vector01List().size(), expected, "Size HashMap doesn't match to expected");
     }    
     
     @Test(enabled = true, groups = {"LinkedList", "List", "All"}, priority = 1)
     public void testLinkedList01List() {
-    	int expected = 8;
+    	int expected = 6;
     	Assert.assertEquals(allDataStructures.linkedList01List().size(), expected, "Size HashMap doesn't match to expected");
     }
     
