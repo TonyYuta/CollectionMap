@@ -10,7 +10,9 @@ package core;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.Set;
+import java.util.Vector;
 
 /**
  * AllDataStructures //ADDD (description of class)
@@ -36,7 +38,13 @@ public class AllDataStructures {
 		//allDataStructures.hashMap02Map();
 		
 		// work with ArrayList
-		allDataStructures.arrayList01List();
+		//allDataStructures.arrayList01List();
+		
+		// work with Vector
+		// allDataStructures.vector01List();
+		
+		// work with LinkedList
+		allDataStructures.linkedList01List();
 		
 
 		
@@ -144,7 +152,7 @@ public class AllDataStructures {
 	} // end hashMap02Map()
 	
 	/*=============================================================================================*/
-	/*=============================================================================================*/
+
 	
 	/*=============================== ArrayList ===================================================*/
 		public ArrayList arrayList01List() {
@@ -162,9 +170,16 @@ public class AllDataStructures {
 			
 			// print out current size
 			System.out.println("arrayList01.size() : " + arrayList01.size());
-			
+	
+						
+			// print out ArrayList
+			System.out.println("arrayList01 : " + arrayList01 + "\n");
+						
 			//  clear(): It is used for removing all the elements of the array list in one go. 
-
+			arrayList01.clear();
+			
+			// print out current size
+			System.out.println("arrayList01.size() : " + arrayList01.size());
 			
 			// populate ArrayList
 			arrayList01.add("apple");
@@ -197,17 +212,1034 @@ public class AllDataStructures {
 			// print out current size
 			System.out.println("arrayList01.size() : " + arrayList01.size());
 			
-
-			
 			return arrayList01;
 		}
 
 		// print out ArrayList in format index & value
-		public void printArrayList(ArrayList al) {
-	
+		public void printArrayList(ArrayList al) {	
 			for (int i = 0; i < al.size(); i++) {
 				System.out.println(i + " : " + al.get(i));
 				}
 		}
+		
+		//=============================================================================================
+
+		
+		//=============================== Vector ===================================================
+		public Vector vector01List() {
+			
+			// create an object
+			Vector vector01 = new Vector();
+			
+			// print out init size	
+			System.out.println("vector01.size() : " + vector01.size());
+			
+			// populate Vector	
+			vector01.addElement("cucumber");
+			vector01.addElement("onion");
+			vector01.addElement("carrot");
+			vector01.addElement("squash");
+			
+			// print out current size	
+			System.out.println("vector01.size() : " + vector01.size());
+
+			// print out Vector		
+			printVector(vector01);
+			
+			// clear(): It is used for removing all the elements of the Vector in one go. 
+			vector01.clear();
+			
+			// print out current size
+			System.out.println("vector01.size() : " + vector01.size());
+			
+			// populate Vector	
+			vector01.addElement("table");
+			vector01.addElement("chair");
+			vector01.addElement("bookshelf");
+			vector01.addElement("cupboard");
+			
+			// add between existing elements	
+			// ??
+			
+			// Object set(int index, Object element)  Replaces the element at the specified position in this vector with the specified element.
+			vector01.set(1, "armchair");
+			
+			// print out current size	
+			System.out.println("vector01.size() : " + vector01.size());
+			
+			// print out Vector	
+			printVector(vector01);
+
+			// Object get(int index)
+			System.out.println("vector01.get(3) : " + vector01.get(3));
+			
+			// boolean contains(Object o): It checks whether the given object o is present in the vector if its there then it returns true else it returns false.		
+			System.out.println("vector01.contains(\"table\") : " + vector01.contains("table"));
+			
+			// clone
+			Vector vector02 = new Vector();
+			System.out.println("vector02 = (Vector)vector01.clone() : ");
+			printVector(vector02 = (Vector)vector01.clone());
+			
+			return vector01;
+		}
+		
+		// print out Vector in format index & value
+		public void printVector(Vector v) {
+			for (int i = 0; i < v.size(); i++) {
+				System.out.println(i + " : " + v.get(i));
+			}
+		}
+		
+		//====================================================================================================
+
+		
+		//=============================== List ========= LinkedList ==========================================
+		public LinkedList linkedList01List() {
+			
+			// create an object
+			//LinkedList linkedList01 = new LinkedList();
+			LinkedList<String> linkedList01 = new LinkedList<>();
+			
+			// print out init size	
+			System.out.println("linkedList01.size() : " + linkedList01.size());
+			
+			// populate LinkedList	
+			linkedList01.add("Azimov");
+			linkedList01.add("Bradbery");
+			linkedList01.add("Hainlain");
+			
+			linkedList01.add(2, "Clark");
+			
+			linkedList01.addFirst("Strugackie");
+			linkedList01.addLast("Gudkain");
+			
+			// print out current size	
+			System.out.println("linkedList01.size() : " + linkedList01.size());
+
+			// print out LinkedList	
+			printLinkedList(linkedList01);
+			
+			// clear(): It is used for removing all the elements of the LinkedList in one go. 
+			linkedList01.clear();
+			
+			// print out current size
+			System.out.println("linkedList01.size() : " + linkedList01.size());
+
+			// populate LinkedList	
+			linkedList01.add("pen");
+			linkedList01.add("pencil");
+			linkedList01.add("eraser");
+
+			// add between existing elements	
+			linkedList01.add(1, "ink");
+			
+			// first & last
+			linkedList01.addFirst("notebook");
+			linkedList01.addLast("gradebook");
+			
+			// Object set(int index, Object element) Replaces the element at the specified position in this LinkedList with the specified element.
+			linkedList01.set(1, "brush");
+			
+			// print out current size	
+			System.out.println("linkedList01.size() : " + linkedList01.size());
+			
+			// print out LinkedList	
+			printLinkedList(linkedList01);
+
+			// Object get(int index)
+			System.out.println("First element: " + linkedList01.getFirst());
+			System.out.println("5-th element: " + linkedList01.get(4));
+			System.out.println("Last element: " + linkedList01.getLast());
+			
+			// boolean contains(Object o): It checks whether the given object o is present in the vector if its there then it returns true else it returns false.		
+			System.out.println("Is element 'eraser' present: " + linkedList01.contains("eraser"));
+			
+			// clone
+			LinkedList linkedList02 = new LinkedList();
+			System.out.println("linkedList01 = (LinkedList)linkedList01.clone() : ");
+			printLinkedList(linkedList02 = (LinkedList)linkedList01.clone());
+			
+			return linkedList01;
+		}
+		
+		// print out LinkedList 
+		public void printLinkedList(LinkedList ll) {
+	        System.out.println("\nLinked list: \n" + ll.toString().replaceAll("[,\\[\\]]", "").replaceAll(" ", "\n"));
+		}
+		
+		//====================================================================================================
+		/*
+		
+		//=============================== Vector ===================================================
+		public Vector vector01List() {
+			
+			// create an object
+			
+			// print out init size	
+			
+			// populate Vector	
+			
+			// print out current size	
+
+			// print out Vector		
+			
+			// clear(): It is used for removing all the elements of the Vector in one go. 
+			
+			// print out current size
+			
+			// populate Vector	
+			
+			// add between existing elements	
+			
+			// Object set(int index, Object element)  Replaces the element at the specified position in this vector with the specified element.
+			
+			// print out current size	
+			
+			// print out Vector	
+
+			// Object get(int index)
+			
+			// boolean contains(Object o): It checks whether the given object o is present in the vector if its there then it returns true else it returns false.		
+			
+			// clone
+			Vector vector02 = new Vector();
+			System.out.println("vector02 = (Vector)vector01.clone() : ");
+			printVector(vector02 = (Vector)vector01.clone());
+			
+			return vector01;
+		}
+		
+		// print out Vector in format index & value
+		public void printVector(Vector v) {
+			for (int i = 0; i < v.size(); i++) {
+				System.out.println(i + " : " + v.get(i));
+			}
+		}
+		
+		//====================================================================================================
+		
+		//=============================== Vector ===================================================
+		public Vector vector01List() {
+			
+			// create an object
+			
+			// print out init size	
+			
+			// populate Vector	
+			
+			// print out current size	
+
+			// print out Vector		
+			
+			// clear(): It is used for removing all the elements of the Vector in one go. 
+			
+			// print out current size
+			
+			// populate Vector	
+			
+			// add between existing elements	
+			
+			// Object set(int index, Object element)  Replaces the element at the specified position in this vector with the specified element.
+			
+			// print out current size	
+			
+			// print out Vector	
+
+			// Object get(int index)
+			
+			// boolean contains(Object o): It checks whether the given object o is present in the vector if its there then it returns true else it returns false.		
+			
+			// clone
+			Vector vector02 = new Vector();
+			System.out.println("vector02 = (Vector)vector01.clone() : ");
+			printVector(vector02 = (Vector)vector01.clone());
+			
+			return vector01;
+		}
+		
+		// print out Vector in format index & value
+		public void printVector(Vector v) {
+			for (int i = 0; i < v.size(); i++) {
+				System.out.println(i + " : " + v.get(i));
+			}
+		}
+		
+		//====================================================================================================
+		
+		//=============================== Vector ===================================================
+		public Vector vector01List() {
+			
+			// create an object
+			
+			// print out init size	
+			
+			// populate Vector	
+			
+			// print out current size	
+
+			// print out Vector		
+			
+			// clear(): It is used for removing all the elements of the Vector in one go. 
+			
+			// print out current size
+			
+			// populate Vector	
+			
+			// add between existing elements	
+			
+			// Object set(int index, Object element)  Replaces the element at the specified position in this vector with the specified element.
+			
+			// print out current size	
+			
+			// print out Vector	
+
+			// Object get(int index)
+			
+			// boolean contains(Object o): It checks whether the given object o is present in the vector if its there then it returns true else it returns false.		
+			
+			// clone
+			Vector vector02 = new Vector();
+			System.out.println("vector02 = (Vector)vector01.clone() : ");
+			printVector(vector02 = (Vector)vector01.clone());
+			
+			return vector01;
+		}
+		
+		// print out Vector in format index & value
+		public void printVector(Vector v) {
+			for (int i = 0; i < v.size(); i++) {
+				System.out.println(i + " : " + v.get(i));
+			}
+		}
+		
+		//====================================================================================================
+		
+		//=============================== Vector ===================================================
+		public Vector vector01List() {
+			
+			// create an object
+			
+			// print out init size	
+			
+			// populate Vector	
+			
+			// print out current size	
+
+			// print out Vector		
+			
+			// clear(): It is used for removing all the elements of the Vector in one go. 
+			
+			// print out current size
+			
+			// populate Vector	
+			
+			// add between existing elements	
+			
+			// Object set(int index, Object element)  Replaces the element at the specified position in this vector with the specified element.
+			
+			// print out current size	
+			
+			// print out Vector	
+
+			// Object get(int index)
+			
+			// boolean contains(Object o): It checks whether the given object o is present in the vector if its there then it returns true else it returns false.		
+			
+			// clone
+			Vector vector02 = new Vector();
+			System.out.println("vector02 = (Vector)vector01.clone() : ");
+			printVector(vector02 = (Vector)vector01.clone());
+			
+			return vector01;
+		}
+		
+		// print out Vector in format index & value
+		public void printVector(Vector v) {
+			for (int i = 0; i < v.size(); i++) {
+				System.out.println(i + " : " + v.get(i));
+			}
+		}
+		
+		//====================================================================================================
+		
+		//=============================== Vector ===================================================
+		public Vector vector01List() {
+			
+			// create an object
+			
+			// print out init size	
+			
+			// populate Vector	
+			
+			// print out current size	
+
+			// print out Vector		
+			
+			// clear(): It is used for removing all the elements of the Vector in one go. 
+			
+			// print out current size
+			
+			// populate Vector	
+			
+			// add between existing elements	
+			
+			// Object set(int index, Object element)  Replaces the element at the specified position in this vector with the specified element.
+			
+			// print out current size	
+			
+			// print out Vector	
+
+			// Object get(int index)
+			
+			// boolean contains(Object o): It checks whether the given object o is present in the vector if its there then it returns true else it returns false.		
+			
+			// clone
+			Vector vector02 = new Vector();
+			System.out.println("vector02 = (Vector)vector01.clone() : ");
+			printVector(vector02 = (Vector)vector01.clone());
+			
+			return vector01;
+		}
+		
+		// print out Vector in format index & value
+		public void printVector(Vector v) {
+			for (int i = 0; i < v.size(); i++) {
+				System.out.println(i + " : " + v.get(i));
+			}
+		}
+		
+		//====================================================================================================
+		
+		//=============================== Vector ===================================================
+		public Vector vector01List() {
+			
+			// create an object
+			
+			// print out init size	
+			
+			// populate Vector	
+			
+			// print out current size	
+
+			// print out Vector		
+			
+			// clear(): It is used for removing all the elements of the Vector in one go. 
+			
+			// print out current size
+			
+			// populate Vector	
+			
+			// add between existing elements	
+			
+			// Object set(int index, Object element)  Replaces the element at the specified position in this vector with the specified element.
+			
+			// print out current size	
+			
+			// print out Vector	
+
+			// Object get(int index)
+			
+			// boolean contains(Object o): It checks whether the given object o is present in the vector if its there then it returns true else it returns false.		
+			
+			// clone
+			Vector vector02 = new Vector();
+			System.out.println("vector02 = (Vector)vector01.clone() : ");
+			printVector(vector02 = (Vector)vector01.clone());
+			
+			return vector01;
+		}
+		
+		// print out Vector in format index & value
+		public void printVector(Vector v) {
+			for (int i = 0; i < v.size(); i++) {
+				System.out.println(i + " : " + v.get(i));
+			}
+		}
+		
+		//====================================================================================================
+		
+		//=============================== Vector ===================================================
+		public Vector vector01List() {
+			
+			// create an object
+			
+			// print out init size	
+			
+			// populate Vector	
+			
+			// print out current size	
+
+			// print out Vector		
+			
+			// clear(): It is used for removing all the elements of the Vector in one go. 
+			
+			// print out current size
+			
+			// populate Vector	
+			
+			// add between existing elements	
+			
+			// Object set(int index, Object element)  Replaces the element at the specified position in this vector with the specified element.
+			
+			// print out current size	
+			
+			// print out Vector	
+
+			// Object get(int index)
+			
+			// boolean contains(Object o): It checks whether the given object o is present in the vector if its there then it returns true else it returns false.		
+			
+			// clone
+			Vector vector02 = new Vector();
+			System.out.println("vector02 = (Vector)vector01.clone() : ");
+			printVector(vector02 = (Vector)vector01.clone());
+			
+			return vector01;
+		}
+		
+		// print out Vector in format index & value
+		public void printVector(Vector v) {
+			for (int i = 0; i < v.size(); i++) {
+				System.out.println(i + " : " + v.get(i));
+			}
+		}
+		
+		//====================================================================================================
+		
+		//=============================== Vector ===================================================
+		public Vector vector01List() {
+			
+			// create an object
+			
+			// print out init size	
+			
+			// populate Vector	
+			
+			// print out current size	
+
+			// print out Vector		
+			
+			// clear(): It is used for removing all the elements of the Vector in one go. 
+			
+			// print out current size
+			
+			// populate Vector	
+			
+			// add between existing elements	
+			
+			// Object set(int index, Object element)  Replaces the element at the specified position in this vector with the specified element.
+			
+			// print out current size	
+			
+			// print out Vector	
+
+			// Object get(int index)
+			
+			// boolean contains(Object o): It checks whether the given object o is present in the vector if its there then it returns true else it returns false.		
+			
+			// clone
+			Vector vector02 = new Vector();
+			System.out.println("vector02 = (Vector)vector01.clone() : ");
+			printVector(vector02 = (Vector)vector01.clone());
+			
+			return vector01;
+		}
+		
+		// print out Vector in format index & value
+		public void printVector(Vector v) {
+			for (int i = 0; i < v.size(); i++) {
+				System.out.println(i + " : " + v.get(i));
+			}
+		}
+		
+		//====================================================================================================
+		
+		//=============================== Vector ===================================================
+		public Vector vector01List() {
+			
+			// create an object
+			
+			// print out init size	
+			
+			// populate Vector	
+			
+			// print out current size	
+
+			// print out Vector		
+			
+			// clear(): It is used for removing all the elements of the Vector in one go. 
+			
+			// print out current size
+			
+			// populate Vector	
+			
+			// add between existing elements	
+			
+			// Object set(int index, Object element)  Replaces the element at the specified position in this vector with the specified element.
+			
+			// print out current size	
+			
+			// print out Vector	
+
+			// Object get(int index)
+			
+			// boolean contains(Object o): It checks whether the given object o is present in the vector if its there then it returns true else it returns false.		
+			
+			// clone
+			Vector vector02 = new Vector();
+			System.out.println("vector02 = (Vector)vector01.clone() : ");
+			printVector(vector02 = (Vector)vector01.clone());
+			
+			return vector01;
+		}
+		
+		// print out Vector in format index & value
+		public void printVector(Vector v) {
+			for (int i = 0; i < v.size(); i++) {
+				System.out.println(i + " : " + v.get(i));
+			}
+		}
+		
+		//====================================================================================================
+		
+		//=============================== Vector ===================================================
+		public Vector vector01List() {
+			
+			// create an object
+			
+			// print out init size	
+			
+			// populate Vector	
+			
+			// print out current size	
+
+			// print out Vector		
+			
+			// clear(): It is used for removing all the elements of the Vector in one go. 
+			
+			// print out current size
+			
+			// populate Vector	
+			
+			// add between existing elements	
+			
+			// Object set(int index, Object element)  Replaces the element at the specified position in this vector with the specified element.
+			
+			// print out current size	
+			
+			// print out Vector	
+
+			// Object get(int index)
+			
+			// boolean contains(Object o): It checks whether the given object o is present in the vector if its there then it returns true else it returns false.		
+			
+			// clone
+			Vector vector02 = new Vector();
+			System.out.println("vector02 = (Vector)vector01.clone() : ");
+			printVector(vector02 = (Vector)vector01.clone());
+			
+			return vector01;
+		}
+		
+		// print out Vector in format index & value
+		public void printVector(Vector v) {
+			for (int i = 0; i < v.size(); i++) {
+				System.out.println(i + " : " + v.get(i));
+			}
+		}
+		
+		//====================================================================================================
+		
+		//=============================== Vector ===================================================
+		public Vector vector01List() {
+			
+			// create an object
+			
+			// print out init size	
+			
+			// populate Vector	
+			
+			// print out current size	
+
+			// print out Vector		
+			
+			// clear(): It is used for removing all the elements of the Vector in one go. 
+			
+			// print out current size
+			
+			// populate Vector	
+			
+			// add between existing elements	
+			
+			// Object set(int index, Object element)  Replaces the element at the specified position in this vector with the specified element.
+			
+			// print out current size	
+			
+			// print out Vector	
+
+			// Object get(int index)
+			
+			// boolean contains(Object o): It checks whether the given object o is present in the vector if its there then it returns true else it returns false.		
+			
+			// clone
+			Vector vector02 = new Vector();
+			System.out.println("vector02 = (Vector)vector01.clone() : ");
+			printVector(vector02 = (Vector)vector01.clone());
+			
+			return vector01;
+		}
+		
+		// print out Vector in format index & value
+		public void printVector(Vector v) {
+			for (int i = 0; i < v.size(); i++) {
+				System.out.println(i + " : " + v.get(i));
+			}
+		}
+		
+		//====================================================================================================
+		
+		//=============================== Vector ===================================================
+		public Vector vector01List() {
+			
+			// create an object
+			
+			// print out init size	
+			
+			// populate Vector	
+			
+			// print out current size	
+
+			// print out Vector		
+			
+			// clear(): It is used for removing all the elements of the Vector in one go. 
+			
+			// print out current size
+			
+			// populate Vector	
+			
+			// add between existing elements	
+			
+			// Object set(int index, Object element)  Replaces the element at the specified position in this vector with the specified element.
+			
+			// print out current size	
+			
+			// print out Vector	
+
+			// Object get(int index)
+			
+			// boolean contains(Object o): It checks whether the given object o is present in the vector if its there then it returns true else it returns false.		
+			
+			// clone
+			Vector vector02 = new Vector();
+			System.out.println("vector02 = (Vector)vector01.clone() : ");
+			printVector(vector02 = (Vector)vector01.clone());
+			
+			return vector01;
+		}
+		
+		// print out Vector in format index & value
+		public void printVector(Vector v) {
+			for (int i = 0; i < v.size(); i++) {
+				System.out.println(i + " : " + v.get(i));
+			}
+		}
+		
+		//====================================================================================================
+		
+		//=============================== Vector ===================================================
+		public Vector vector01List() {
+			
+			// create an object
+			
+			// print out init size	
+			
+			// populate Vector	
+			
+			// print out current size	
+
+			// print out Vector		
+			
+			// clear(): It is used for removing all the elements of the Vector in one go. 
+			
+			// print out current size
+			
+			// populate Vector	
+			
+			// add between existing elements	
+			
+			// Object set(int index, Object element)  Replaces the element at the specified position in this vector with the specified element.
+			
+			// print out current size	
+			
+			// print out Vector	
+
+			// Object get(int index)
+			
+			// boolean contains(Object o): It checks whether the given object o is present in the vector if its there then it returns true else it returns false.		
+			
+			// clone
+			Vector vector02 = new Vector();
+			System.out.println("vector02 = (Vector)vector01.clone() : ");
+			printVector(vector02 = (Vector)vector01.clone());
+			
+			return vector01;
+		}
+		
+		// print out Vector in format index & value
+		public void printVector(Vector v) {
+			for (int i = 0; i < v.size(); i++) {
+				System.out.println(i + " : " + v.get(i));
+			}
+		}
+		
+		//====================================================================================================
+		
+		//=============================== Vector ===================================================
+		public Vector vector01List() {
+			
+			// create an object
+			
+			// print out init size	
+			
+			// populate Vector	
+			
+			// print out current size	
+
+			// print out Vector		
+			
+			// clear(): It is used for removing all the elements of the Vector in one go. 
+			
+			// print out current size
+			
+			// populate Vector	
+			
+			// add between existing elements	
+			
+			// Object set(int index, Object element)  Replaces the element at the specified position in this vector with the specified element.
+			
+			// print out current size	
+			
+			// print out Vector	
+
+			// Object get(int index)
+			
+			// boolean contains(Object o): It checks whether the given object o is present in the vector if its there then it returns true else it returns false.		
+			
+			// clone
+			Vector vector02 = new Vector();
+			System.out.println("vector02 = (Vector)vector01.clone() : ");
+			printVector(vector02 = (Vector)vector01.clone());
+			
+			return vector01;
+		}
+		
+		// print out Vector in format index & value
+		public void printVector(Vector v) {
+			for (int i = 0; i < v.size(); i++) {
+				System.out.println(i + " : " + v.get(i));
+			}
+		}
+		
+		//====================================================================================================
+		
+		//=============================== Vector ===================================================
+		public Vector vector01List() {
+			
+			// create an object
+			
+			// print out init size	
+			
+			// populate Vector	
+			
+			// print out current size	
+
+			// print out Vector		
+			
+			// clear(): It is used for removing all the elements of the Vector in one go. 
+			
+			// print out current size
+			
+			// populate Vector	
+			
+			// add between existing elements	
+			
+			// Object set(int index, Object element)  Replaces the element at the specified position in this vector with the specified element.
+			
+			// print out current size	
+			
+			// print out Vector	
+
+			// Object get(int index)
+			
+			// boolean contains(Object o): It checks whether the given object o is present in the vector if its there then it returns true else it returns false.		
+			
+			// clone
+			Vector vector02 = new Vector();
+			System.out.println("vector02 = (Vector)vector01.clone() : ");
+			printVector(vector02 = (Vector)vector01.clone());
+			
+			return vector01;
+		}
+		
+		// print out Vector in format index & value
+		public void printVector(Vector v) {
+			for (int i = 0; i < v.size(); i++) {
+				System.out.println(i + " : " + v.get(i));
+			}
+		}
+		
+		//====================================================================================================
+		
+		//=============================== Vector ===================================================
+		public Vector vector01List() {
+			
+			// create an object
+			
+			// print out init size	
+			
+			// populate Vector	
+			
+			// print out current size	
+
+			// print out Vector		
+			
+			// clear(): It is used for removing all the elements of the Vector in one go. 
+			
+			// print out current size
+			
+			// populate Vector	
+			
+			// add between existing elements	
+			
+			// Object set(int index, Object element)  Replaces the element at the specified position in this vector with the specified element.
+			
+			// print out current size	
+			
+			// print out Vector	
+
+			// Object get(int index)
+			
+			// boolean contains(Object o): It checks whether the given object o is present in the vector if its there then it returns true else it returns false.		
+			
+			// clone
+			Vector vector02 = new Vector();
+			System.out.println("vector02 = (Vector)vector01.clone() : ");
+			printVector(vector02 = (Vector)vector01.clone());
+			
+			return vector01;
+		}
+		
+		// print out Vector in format index & value
+		public void printVector(Vector v) {
+			for (int i = 0; i < v.size(); i++) {
+				System.out.println(i + " : " + v.get(i));
+			}
+		}
+		
+		//====================================================================================================
+		
+		//=============================== Vector ===================================================
+		public Vector vector01List() {
+			
+			// create an object
+			
+			// print out init size	
+			
+			// populate Vector	
+			
+			// print out current size	
+
+			// print out Vector		
+			
+			// clear(): It is used for removing all the elements of the Vector in one go. 
+			
+			// print out current size
+			
+			// populate Vector	
+			
+			// add between existing elements	
+			
+			// Object set(int index, Object element)  Replaces the element at the specified position in this vector with the specified element.
+			
+			// print out current size	
+			
+			// print out Vector	
+
+			// Object get(int index)
+			
+			// boolean contains(Object o): It checks whether the given object o is present in the vector if its there then it returns true else it returns false.		
+			
+			// clone
+			Vector vector02 = new Vector();
+			System.out.println("vector02 = (Vector)vector01.clone() : ");
+			printVector(vector02 = (Vector)vector01.clone());
+			
+			return vector01;
+		}
+		
+		// print out Vector in format index & value
+		public void printVector(Vector v) {
+			for (int i = 0; i < v.size(); i++) {
+				System.out.println(i + " : " + v.get(i));
+			}
+		}
+		
+		//====================================================================================================
+		
+		//=============================== Vector ===================================================
+		public Vector vector01List() {
+			
+			// create an object
+			
+			// print out init size	
+			
+			// populate Vector	
+			
+			// print out current size	
+
+			// print out Vector		
+			
+			// clear(): It is used for removing all the elements of the Vector in one go. 
+			
+			// print out current size
+			
+			// populate Vector	
+			
+			// add between existing elements	
+			
+			// Object set(int index, Object element)  Replaces the element at the specified position in this vector with the specified element.
+			
+			// print out current size	
+			
+			// print out Vector	
+
+			// Object get(int index)
+			
+			// boolean contains(Object o): It checks whether the given object o is present in the vector if its there then it returns true else it returns false.		
+			
+			// clone
+			Vector vector02 = new Vector();
+			System.out.println("vector02 = (Vector)vector01.clone() : ");
+			printVector(vector02 = (Vector)vector01.clone());
+			
+			return vector01;
+		}
+		
+		// print out Vector in format index & value
+		public void printVector(Vector v) {
+			for (int i = 0; i < v.size(); i++) {
+				System.out.println(i + " : " + v.get(i));
+			}
+		}
+		
+		//====================================================================================================
+		
+		
+	
+		
+	*/
+		
+
 
 } // class AllDataStructures 
