@@ -40,26 +40,26 @@ public class AllDataStructures {
 
 		
 		// work with ArrayList
-		//allDataStructures.arrayList01List();
+		allDataStructures.arrayList01List();
 		
 		// work with Vector
-		//allDataStructures.vector01List();
+		allDataStructures.vector01List();
 		
 		// work with LinkedList
-		//allDataStructures.linkedList01List();
+		allDataStructures.linkedList01List();
 		
 		// work with HashSet
-		//allDataStructures.hashSet01Set();
+		allDataStructures.hashSet01Set();
 		
 		// work with LinkedHashSet
-		//allDataStructures.linkedHashSet01Set();
+		allDataStructures.linkedHashSet01Set();
 		
 		// work with LinkedHashSet
 		allDataStructures.treeSet01Set();
 				
 		// work with HashMap
-		//allDataStructures.hashMap01Map();
-		//allDataStructures.hashMap02Map();
+		allDataStructures.hashMap01Map();
+		allDataStructures.hashMap02Map();
 		
 
 		
