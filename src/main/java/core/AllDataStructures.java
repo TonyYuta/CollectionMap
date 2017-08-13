@@ -15,6 +15,7 @@ import java.util.Iterator;
 import java.util.LinkedHashSet;
 import java.util.LinkedList;
 import java.util.Set;
+import java.util.Stack;
 import java.util.TreeSet;
 import java.util.Vector;
 
@@ -37,29 +38,31 @@ public class AllDataStructures {
 		// instance of a class AllDataStructures
 		AllDataStructures allDataStructures = new AllDataStructures();
 		
-
-		
 		// work with ArrayList
-		allDataStructures.arrayList01List();
+		//allDataStructures.arrayList01List();
 		
 		// work with Vector
-		allDataStructures.vector01List();
+		//allDataStructures.vector01List();
 		
 		// work with LinkedList
-		allDataStructures.linkedList01List();
+		//allDataStructures.linkedList01List();
 		
 		// work with HashSet
-		allDataStructures.hashSet01Set();
+		//allDataStructures.hashSet01Set();
 		
 		// work with LinkedHashSet
-		allDataStructures.linkedHashSet01Set();
+		//allDataStructures.linkedHashSet01Set();
 		
 		// work with LinkedHashSet
-		allDataStructures.treeSet01Set();
+		//allDataStructures.treeSet01Set();
+		
+		// work with Stack
+		allDataStructures.stack01Queue();
+		
 				
 		// work with HashMap
-		allDataStructures.hashMap01Map();
-		allDataStructures.hashMap02Map();
+		//allDataStructures.hashMap01Map();
+		//allDataStructures.hashMap02Map();
 		
 
 		
@@ -512,55 +515,92 @@ public class AllDataStructures {
 		}
 		
 		//====================================================================================================
-		/*
+		
 		//=============================== Vector ===================================================
-		public Vector vector01List() {
+		 	/* 
+		 	Stack class is the child class of Vector.
+ 			- It follows LIFO (Last in first out) mechanism.
+ 			- It is the stack implementation in java
+ 			*/
+		public Stack stack01Queue() {
 			
 			// create an object
+			Stack<Double> stack01 = new Stack<>();
 			
 			// print out init size	
+			System.out.println("stack01.size() : " + stack01.size());
 			
-			// populate Vector	
+			// populate Stack	
+			stack01.add(1.11D);
+			stack01.add(7.77D);
+			stack01.add(-2.22D);
+			stack01.add(-9.99);
+			stack01.add(null);
+			stack01.add(4.44);
 			
 			// print out current size	
-
-			// print out Vector		
+			System.out.println("stack01.size() : " + stack01.size());
+			
+			// print out Stack		
+			printStack(stack01);
 			
 			// clear(): It is used for removing all the elements of the Vector in one go. 
+			stack01.clear();
 			
 			// print out current size
+			System.out.println("stack01.size() : " + stack01.size());
 			
-			// populate Vector	
+			// populate Stack	
+			for (int i = 0; i < 10; i++) {
+				stack01.add(1.11 * i);
+			}
 			
-			// add between existing elements	
+			// Object push(Object item)
+		    // Pushes the element into Stack and returns the same element
+			stack01.push(1.01D);
 			
-			// Object set(int index, Object element)  Replaces the element at the specified position in this vector with the specified element.
+			// print out Stack	
+			printStack(stack01);
+			
+			// Object pop()
+		    // Removes the element from Stack and returns the element			
+			stack01.pop();
 			
 			// print out current size	
-			
-			// print out Vector	
+			System.out.println("stack01.size() : " + stack01.size());
+
+			// print out Stack	
+			printStack(stack01);
 
 			// Object get(int index)
+			System.out.println("stack01.get(2) : " + stack01.get(2));
 			
-			// boolean contains(Object o): It checks whether the given object o is present in the vector if its there then it returns true else it returns false.		
+			// Object peek()
+			// Returns the top element from Stack.
+			System.out.println("stack01.peek() : " + stack01.peek());
 			
+			// Object empty()
+		    // Returns true when the Stack is empty.
+			System.out.println("stack01.empty() : " + stack01.empty());
+						
 			// clone
-			Vector vector02 = new Vector();
-			System.out.println("vector02 = (Vector)vector01.clone() : ");
-			printVector(vector02 = (Vector)vector01.clone());
+			Stack<Double> stack02 = new Stack<>();
+			System.out.println("stack02 = (Stack)stack01.clone() : ");
+			printStack(stack02 = (Stack)stack01.clone());
 			
-			return vector01;
+			return stack02;
 		}
 		
-		// print out Vector in format index & value
-		public void printVector(Vector v) {
-			for (int i = 0; i < v.size(); i++) {
-				System.out.println(i + " : " + v.get(i));
+		// print out Stack in format index & value
+		public void printStack(Stack st) {
+			for (int i = 0; i < st.size(); i++) {
+				Double n = (Double) st.get(i);
+				System.out.printf(i + " : " + "\t" + "%.3f%n", n);
 			}
 		}
 		
 		//====================================================================================================
-		
+		/*
 		//=============================== Vector ===================================================
 		public Vector vector01List() {
 			
