@@ -99,8 +99,9 @@ public class CollectionMapTest {
     @Test(enabled = true, groups = {"Stack", "Queue", "All"}, priority = 3)
     public void testStack01Queue() {
     	int expected = 10;
-    	Assert.assertEquals(allDataStructures.stack01Queue(), expected, "Size Stack doesn't match to expected");
+    	Assert.assertEquals(allDataStructures.stack01Queue().size(), expected, "Size Stack doesn't match to expected");
     }
+    
     
     
     
