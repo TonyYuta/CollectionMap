@@ -136,9 +136,9 @@
                     </goals>
                     <configuration>
                         <testFailureIgnore>true</testFailureIgnore>
-<!--
+
                         <argLine>${surefireArgLine}</argLine>
--->
+
                   </configuration>
                 </execution>
             </executions>
