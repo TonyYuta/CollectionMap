@@ -9,12 +9,9 @@
 <url>http://maven.apache.org</url>
 
 <properties>
-
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
-
 </properties>
 
 <dependencies>
@@ -136,10 +133,8 @@
                     </goals>
                     <configuration>
                         <testFailureIgnore>true</testFailureIgnore>
-
-                        <argLine>${surefireArgLine}</argLine>
-
-                  </configuration>
+						<!-- <argLine>${surefireArgLine}</argLine> -->   
+                 	</configuration>
                 </execution>
             </executions>
             <configuration>
@@ -188,9 +183,7 @@
             <artifactId>maven-pmd-plugin</artifactId>
             <version>3.8</version>
             <configuration>
-
-                          <linkXref>true</linkXref>
-
+                <linkXref>true</linkXref>
                 <sourceEncoding>utf-8</sourceEncoding>
                 <skipEmptyReport>false</skipEmptyReport>
                 <minimumTokens>100</minimumTokens>
