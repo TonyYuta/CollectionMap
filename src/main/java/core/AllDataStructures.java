@@ -14,6 +14,7 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.LinkedHashSet;
 import java.util.LinkedList;
+import java.util.PriorityQueue;
 import java.util.Set;
 import java.util.Stack;
 import java.util.TreeSet;
@@ -57,7 +58,11 @@ public class AllDataStructures {
 		//allDataStructures.treeSet01Set();
 		
 		// work with Stack
-		allDataStructures.stack01Queue();
+		// allDataStructures.stack01Queue();
+		
+		// work with PriorityQueue
+		allDataStructures.priorityQueue01Queue();
+		
 		
 				
 		// work with HashMap
@@ -600,6 +605,86 @@ public class AllDataStructures {
 		}
 		
 		//====================================================================================================
+		
+		//=============================== PriorityQueue ===================================================
+	 	// To process the objects in the queue based on the priority, we tend to use PriorityQueue.
+
+		public PriorityQueue priorityQueue01Queue() {
+			
+			// create an object
+			PriorityQueue<String> priorityQueue01 = new PriorityQueue<>();
+			
+			// print out init size	
+			System.out.println("priorityQueue01.size() : " + priorityQueue01.size());
+			
+			// populate Stack	
+			priorityQueue01.add("romance");
+			priorityQueue01.add("drama");
+			priorityQueue01.add("history");
+			priorityQueue01.add("anime");
+		
+			// print out current size	
+			System.out.println("priorityQueue01.size() : " + priorityQueue01.size());
+			
+			// print out PriorityQueue		
+			printPriorityQueue(priorityQueue01);
+			
+			// clear(): It is used for removing all the elements of the Vector in one go. 
+			priorityQueue01.clear();
+			
+			// print out current size
+			System.out.println("priorityQueue01.size() : " + priorityQueue01.size());
+			
+			// populate priorityQueue01	
+			for (int i = 0; i < 10; i++) {
+				priorityQueue01.add("genre" + i);
+			}
+			
+			// Object push(Object item)
+		    // Pushes the element into Stack and returns the same element
+			
+			// print out Stack	
+			printPriorityQueue(priorityQueue01);
+			
+			// Object pop()
+		    // Removes the element from Stack and returns the element			
+	//		priorityQueue01.pop();
+			
+			// print out current size	
+			System.out.println("stack01.size() : " + priorityQueue01.size());
+	
+			// print out PriorityQueue	
+			printPriorityQueue(priorityQueue01);
+	
+			// Object get(int index)
+	//		System.out.println("priorityQueue01.get(2) : " + priorityQueue01.);
+			
+			// Object peek()
+			// Returns the top element from PriorityQueue.
+			System.out.println("priorityQueue01.peek() : " + priorityQueue01.peek());
+			
+			// Object empty()
+		    // Returns true when the PriorityQueue is empty.
+	//		System.out.println("priorityQueue01.empty() : " + priorityQueue01.empty());
+						
+			// clone
+			PriorityQueue<String> priorityQueue02 = new PriorityQueue<>();
+			System.out.println("priorityQueue02 = (PriorityQueue)priorityQueue01.clone() : ");
+	//		priorityQueue02 = (PriorityQueue)priorityQueue01.clone());
+			
+			return priorityQueue01;
+		}
+		
+		// print out PriorityQueue 
+		public void printPriorityQueue(PriorityQueue pq) {
+			Iterator it = pq.iterator();
+			while(it.hasNext()) {
+			System.out.println(it.next());
+			}
+		}
+	
+		//====================================================================================================
+		
 		/*
 		//=============================== Vector ===================================================
 		public Vector vector01List() {
