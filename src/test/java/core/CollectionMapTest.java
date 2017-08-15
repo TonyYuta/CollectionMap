@@ -122,25 +122,25 @@ public class CollectionMapTest {
     	Assert.assertEquals(allDataStructures.hashMap01Map().size(), expected, "Size HashMap doesn't match to expected");
     }
     
-    @Test(enabled = true, groups = {"HashMap", "Map", "All" }, priority = 4)
+    @Test(enabled = true, groups = {"HashMap", "Map", "All" }, dependsOnMethods = {"testHashMap01Map"}, priority = 4)
     public void testHashMap02Map() {
     	int expected = 8;
     	Assert.assertEquals(allDataStructures.hashMap02Map().size(), expected, "Size HashMap doesn't match to expected");
     }
     
-    @Test(enabled = true, groups = {"HashTable", "Map", "All" }, dependsOnGroups = {"HashMap"}, priority = 4)
+    @Test(enabled = true, groups = {"HashTable", "Map", "All" }, dependsOnMethods = {"testHashMap01Map"}, priority = 4)
     public void testHashtable01Map() {
     	int expected = 3;
     	Assert.assertEquals(allDataStructures.hashtable01Map().size(), expected, "Size HashTable doesn't match to expected");
     }
     
-    @Test(enabled = true, groups = {"LinkedHashMap", "Map", "All" }, dependsOnGroups = {"HashMap"}, priority = 4)
+    @Test(enabled = true, groups = {"LinkedHashMap", "Map", "All" }, dependsOnMethods = {"testHashMap01Map"}, priority = 4)
     public void testLinkedHashMap01Map() {
     	int expected = 2;
     	Assert.assertEquals(allDataStructures.linkedHashMap01Map().size(), expected, "Size LinkedHashMap doesn't match to expected");
     }
     
-    @Test(enabled = true, groups = {"TreeMap", "Map", "All" }, dependsOnGroups = {"HashMap"}, priority = 4)
+    @Test(enabled = true, groups = {"TreeMap", "Map", "All" }, dependsOnMethods = {"testHashMap01Map"}, priority = 4)
     public void testTreeMap01Map() {
     	int expected = 4;
     	Assert.assertEquals(allDataStructures.treeMap01Map().size(), expected, "Size TreeMap doesn't match to expected");
