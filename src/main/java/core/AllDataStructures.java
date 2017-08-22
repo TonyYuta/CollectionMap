@@ -10,6 +10,7 @@ package core;
 
 import java.util.ArrayDeque;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Hashtable;
@@ -23,6 +24,8 @@ import java.util.Stack;
 import java.util.TreeMap;
 import java.util.TreeSet;
 import java.util.Vector;
+
+import org.apache.commons.lang3.ArrayUtils;
 
 /**
  * AllDataStructures //ADDD (description of class)
@@ -43,51 +46,147 @@ public class AllDataStructures {
 		// instance of a class AllDataStructures
 		AllDataStructures allDataStructures = new AllDataStructures();
 		
+		// work with Array
+		allDataStructures.array01Array();
+		
 		// work with ArrayList
-		allDataStructures.arrayList01List();
+	//	allDataStructures.arrayList01List();
 		
 		// work with Vector
-		allDataStructures.vector01List();
+		//allDataStructures.vector01List();
 		
 		// work with LinkedList
-		allDataStructures.linkedList01List();
+		//allDataStructures.linkedList01List();
 		
 		// work with HashSet
-		allDataStructures.hashSet01Set();
+		//allDataStructures.hashSet01Set();
 		
 		// work with LinkedHashSet
-		allDataStructures.linkedHashSet01Set();
+		//allDataStructures.linkedHashSet01Set();
 		
-		// work with LinkedHashSet
-		allDataStructures.treeSet01Set();
+		// work with TreeSet
+		//allDataStructures.treeSet01Set();
 		
 		// work with Stack
-		allDataStructures.stack01Queue();
+		//allDataStructures.stack01Queue();
 		
 		// work with PriorityQueue
-		allDataStructures.priorityQueue01Queue();
+		//allDataStructures.priorityQueue01Queue();
 		
 		// work with ArrayDeque
-		allDataStructures.arrayDeque01Queue();
+		//allDataStructures.arrayDeque01Queue();
 				
 		// work with HashMap
-		allDataStructures.hashMap01Map();
-		allDataStructures.hashMap02Map();
+		//allDataStructures.hashMap01Map();
+		//allDataStructures.hashMap02Map();
 		
 		// work with Hashtable
-		allDataStructures.hashtable01Map();
+		//allDataStructures.hashtable01Map();
 
 		// work with LinkedHashMap
-		allDataStructures.linkedHashMap01Map();
+		//allDataStructures.linkedHashMap01Map();
 
-		// work with LinkedHashMap
-		allDataStructures.treeMap01Map();
+		// work with TreeMap
+		//allDataStructures.treeMap01Map();
 		
 	} // end main	
 	
 	/*=============================================================================================*/
 	/*=============================================================================================*/
 
+	
+	/*=============================== Array ===================================================*/
+	public int[] array01Array() {
+		
+		// create an object
+		int[] arr01 = new int[10];
+		
+		// print out init size
+		System.out.println("arr01.length : " + arr01.length);
+
+		// populate Array
+		for (int i = 0; i < arr01.length; i++) {
+			arr01[i] = 10 + i;
+		}
+		
+		// print out current length
+		System.out.println("arr01.length : " + arr01.length);
+					
+		// print out Array
+		printArray(arr01);
+					
+		// remove element
+		arr01 = ArrayUtils.removeElement(arr01, 11);
+		
+		// print out current length
+		System.out.println("arr01.length : " + arr01.length);
+
+		// print out Array
+		printArray(arr01);
+		
+		// populate Array
+		arr01[0] = 21;
+		arr01[1] = 24;
+		arr01[2] = 2;
+		arr01[3] = -6;
+		arr01[4] = 34;
+		arr01[5] = 5;
+		arr01[6] = -88;
+		arr01[7] = 7;
+		arr01[8] = 45;
+
+		// print out current length
+		System.out.println("arr01.length : " + arr01.length);
+					
+		// print out Array
+		printArray(arr01);
+		
+		// find min
+		int min = arr01[0];
+		for (int i : arr01) {
+			if (i < min) 
+				min = i;
+		}
+		System.out.println("min = " + min);
+		
+		// find max
+		int max = arr01[0];
+		for (int i : arr01) {
+			if(i > max)
+				max = i;
+		}
+		System.out.println("max = " + max);
+		
+		// build-in sort
+		java.util.Arrays.sort(arr01);		
+		
+		// Searching Arrays with Arrays.binarySearch()
+		// The array must first be sorted.
+		int searchNum = 5;
+		int index = Arrays.binarySearch(arr01, searchNum);
+		System.out.println(index >= 0 ? searchNum + " is present" : searchNum + " is not present");
+						
+		// copy array
+		int[] arr02 = new int[9];
+		for(int i = 0; i < arr01.length; i++) {
+			arr02[i] = arr01[i];
+		}
+		
+		// print out current length
+		System.out.println("arr02 : ");
+		printArray(arr02);
+		
+		return arr02;
+	}
+
+	// print out Array in format index & value
+	public void printArray(int[] arr) {	
+		for (int i = 0; i < arr.length; i++) {
+			System.out.println(i + " : " + arr[i]);
+			}
+	}
+	
+	//=============================================================================================
 	
 	
 	
